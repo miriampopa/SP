@@ -1,7 +1,15 @@
+import java.util.concurrent.TimeUnit;
 
 public class Image extends Element{
     private String Title;
-    public Image(String title) {Title=title;}
+    public Image(String title) {
+    	super();
+    	Title=title;
+    try { 
+    	TimeUnit.SECONDS.sleep(5);
+    	}catch(InterruptedException e) 
+              {e.printStackTrace();}
+    }
 	public String getTitle() {
 		return Title;
 	}
